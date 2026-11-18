@@ -65,8 +65,11 @@ const NAV = [
  * Same content users get, just unstyled by the app — never hidden text.
  */
 const renderBody = (r: RouteSeo): string => {
+  // display:none → real visitors never see an unstyled flash while JS loads (the page background is
+  // already cinema-black from the CSS). The markup stays in the HTML for crawlers that don't run JS,
+  // and the <noscript> rule below un-hides it for visitors who have JS disabled.
   const style =
-    'max-width:880px;margin:0 auto;padding:48px 24px;color:#F5F0E8;font-family:Georgia,\'Times New Roman\',serif;line-height:1.7';
+    'display:none;max-width:880px;margin:0 auto;padding:48px 24px;color:#F5F0E8;font-family:Georgia,\'Times New Roman\',serif;line-height:1.7';
   const link = 'color:#E9B96E;text-decoration:none';
   const lists = (r.body.list ?? [])
     .map(
@@ -81,6 +84,7 @@ const renderBody = (r: RouteSeo): string => {
     .join(' · ');
 
   return [
+    '<noscript><style>[data-seo-static]{display:block!important}</style></noscript>',
     `<main data-seo-static style="${style}">`,
     `<header><p><a href="/" style="${link}">${esc(SITE.name)}</a> — ${esc(filmmaker.roles.join(' · ').toLowerCase())}</p>`,
     `<nav aria-label="Primary">${NAV.map(([h, n]) => `<a href="${h}" style="${link};margin-right:16px">${esc(n)}</a>`).join('')}</nav></header>`,

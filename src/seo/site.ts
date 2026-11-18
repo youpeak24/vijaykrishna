@@ -637,36 +637,20 @@ const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
 
 export const buildSitemap = (): string => {
-  const filmBySlug = new Map(films.map((f) => [`/films/${f.slug}`, f]));
-  const urls = ROUTES.map((r) => {
-    const f = filmBySlug.get(r.path);
-    const images: string[] = [];
-    if (f) {
-      const title = filmTitle(f);
-      images.push(
-        `      <image:image>\n        <image:loc>${esc(f.poster)}</image:loc>\n        <image:title>${esc(`${title} (${f.year}) poster`)}</image:title>\n      </image:image>`,
-      );
-      f.stills.slice(0, 3).forEach((s, i) =>
-        images.push(
-          `      <image:image>\n        <image:loc>${esc(s)}</image:loc>\n        <image:title>${esc(`${title} — still ${i + 1}`)}</image:title>\n      </image:image>`,
-        ),
-      );
-    }
-    return [
+  const urls = ROUTES.map((r) =>
+    [
       '  <url>',
       `    <loc>${esc(abs(r.path))}</loc>`,
       `    <lastmod>${SITE.lastModified}</lastmod>`,
       `    <changefreq>${r.changefreq}</changefreq>`,
       `    <priority>${r.priority.toFixed(1)}</priority>`,
-      `    <xhtml:link rel="alternate" hreflang="en-IN" href="${esc(abs(r.path))}" />`,
-      ...images.map((i) => i.replace(/^ {6}/, '    ')),
       '  </url>',
-    ].join('\n');
-  });
+    ].join('\n'),
+  );
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...urls,
     '</urlset>',
     '',
