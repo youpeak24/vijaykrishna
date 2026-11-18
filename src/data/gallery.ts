@@ -1,0 +1,133 @@
+export interface GalleryItem {
+  id: string;
+  src: string;
+  category: 'on-set' | 'behind-the-scenes' | 'film-stills' | 'portraits' | 'events';
+  caption: string;
+  project?: string;
+  location?: string;
+  year: string;
+  aspectRatio: 'square' | 'portrait' | 'landscape' | 'wide';
+}
+
+export const gallery: GalleryItem[] = [
+  {
+    id: 'g1',
+    src: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+    category: 'film-stills',
+    caption: 'Nocturnal courtyard sequence framing the temple corridor',
+    project: 'Nilavil Ondru',
+    location: 'Madurai, Tamil Nadu',
+    year: '2023',
+    aspectRatio: 'landscape',
+  },
+  {
+    id: 'g2',
+    src: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80',
+    category: 'on-set',
+    caption: 'Setting the 35mm anamorphic rig in dense Nilgiri fog',
+    project: 'Kaadu Kuyil',
+    location: 'Western Ghats',
+    year: '2022',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: 'g3',
+    src: 'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=80',
+    category: 'behind-the-scenes',
+    caption: 'Director Vijay Bharath choreographing the climatic dock sequence',
+    project: 'Ratchagan Rises',
+    location: 'Thoothukudi Port',
+    year: '2021',
+    aspectRatio: 'landscape',
+  },
+  {
+    id: 'g4',
+    src: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80',
+    category: 'events',
+    caption: 'Post-screening standing ovation at MAMI Mumbai Film Festival',
+    project: 'Nilavil Ondru Premiere',
+    location: 'Mumbai',
+    year: '2023',
+    aspectRatio: 'wide',
+  },
+  {
+    id: 'g5',
+    src: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80',
+    category: 'film-stills',
+    caption: 'Natural sun-flare study over barren Ramanathapuram soil',
+    project: 'Mazhai',
+    location: 'Ramanathapuram',
+    year: '2020',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: 'g6',
+    src: 'https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80',
+    category: 'portraits',
+    caption: 'Vijay Bharath on the sound mixing stage with Dolby Atmos team',
+    project: 'Studio Portrait',
+    location: 'Chennai Studio',
+    year: '2024',
+    aspectRatio: 'square',
+  },
+  {
+    id: 'g7',
+    src: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
+    category: 'on-set',
+    caption: 'Period lighting setup using warm tungsten lanterns across three riverbanks',
+    project: 'Vaanam Thiranthu',
+    location: 'Tirunelveli',
+    year: '2023',
+    aspectRatio: 'wide',
+  },
+  {
+    id: 'g8',
+    src: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80',
+    category: 'behind-the-scenes',
+    caption: 'Color grade inspection at Baselight suite with chief colorist',
+    project: 'Nila Kavithai',
+    location: 'Prasad Film Labs, Chennai',
+    year: '2024',
+    aspectRatio: 'landscape',
+  },
+  {
+    id: 'g9',
+    src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80',
+    category: 'portraits',
+    caption: 'Editorial profile photograph for Film Companion feature',
+    project: 'Filmmaker Profile',
+    location: 'Chennai',
+    year: '2023',
+    aspectRatio: 'portrait',
+  },
+  {
+    id: 'g10',
+    src: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=80',
+    category: 'film-stills',
+    caption: 'Monsoon clouds gathering over the Western Ghats horizon',
+    project: 'Kaadu Kuyil',
+    location: 'Ooty Pass',
+    year: '2022',
+    aspectRatio: 'landscape',
+  },
+  {
+    id: 'g11',
+    src: 'https://images.unsplash.com/photo-1518134346374-184f9d21eb29?auto=format&fit=crop&w=1200&q=80',
+    category: 'events',
+    caption: 'Acceptance speech for Best Director at Chennai International Film Festival',
+    project: 'CIFF Gala Night',
+    location: 'Chennai',
+    year: '2023',
+    aspectRatio: 'square',
+  },
+  {
+    id: 'g12',
+    src: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80',
+    category: 'on-set',
+    caption: 'Steadicam tracking shot through the pre-dawn fish market',
+    project: 'Nilavil Ondru',
+    location: 'Rameshwaram',
+    year: '2023',
+    aspectRatio: 'wide',
+  },
+];

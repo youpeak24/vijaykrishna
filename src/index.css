@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Custom Properties ─────────────────────────────── */
+:root {
+  --cinema-black: #08080B;
+  --charcoal: #111116;
+  --graphite: #1B1B23;
+  --ivory: #F5F0E8;
+  --silver: #A7A5AF;
+  --crimson: #FF304F;
+  --gold: #E9B96E;
+  --violet: #8B5CF6;
+  --magenta: #F542A7;
+  --royal-blue: #3478F6;
+  --orange: #FF793F;
+  --teal: #2DD4BF;
+}
+
+/* ─── Base Styles ────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: auto !important;
+    background-color: var(--cinema-black);
+  }
+
+  body {
+    @apply bg-cinemaBlack text-ivory font-body;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Lenis recommended rules */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+
+  ::selection {
+    background-color: var(--crimson);
+    color: var(--ivory);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--cinema-black);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--crimson);
+  }
+}
+
+/* ─── Film Grain Overlay ─────────────────────────────────── */
+.film-grain {
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.028;
+  animation: grain 0.4s steps(1) infinite;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+
+/* ─── Component Utilities ───────────────────────────────── */
+@layer components {
+  .container-wide {
+    @apply max-w-screen-2xl mx-auto px-6 md:px-12 lg:px-20;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 bg-crimson text-ivory font-body font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:bg-crimson/80;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-8 py-4 border border-ivory/30 text-ivory font-body font-semibold text-sm tracking-widest uppercase transition-all duration-300 hover:border-gold hover:text-gold;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 text-silver font-body font-medium text-sm tracking-widest uppercase transition-all duration-300 hover:text-ivory;
+  }
+
+  .eyebrow {
+    @apply text-xs font-body font-semibold tracking-[0.3em] uppercase text-silver;
+  }
+
+  .display-xl {
+    @apply font-display text-[80px] md:text-[120px] lg:text-[160px] xl:text-[200px] leading-none tracking-tight;
+  }
+
+  .display-lg {
+    @apply font-display text-[60px] md:text-[90px] lg:text-[120px] leading-none;
+  }
+
+  .display-md {
+    @apply font-display text-[40px] md:text-[60px] lg:text-[80px] leading-none;
+  }
+
+  .editorial-heading {
+    @apply font-editorial text-3xl md:text-4xl lg:text-5xl font-light leading-tight;
+  }
+
+  .body-text {
+    @apply font-body text-base md:text-lg leading-relaxed text-silver;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-crimson;
+  }
+
+  .film-frame-corner {
+    @apply absolute w-8 h-8 border-ivory/20;
+  }
+
+  .nav-link {
+    @apply font-body text-xs font-semibold tracking-[0.2em] uppercase text-silver/80 hover:text-ivory transition-colors duration-300;
+  }
+
+  .card-hover {
+    @apply transition-transform duration-500 ease-out hover:-translate-y-2;
+  }
+}
+
+/* ─── Animations ─────────────────────────────────────────── */
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-5%, -10%); }
+  20% { transform: translate(10%, 5%); }
+  30% { transform: translate(5%, -15%); }
+  40% { transform: translate(-10%, 10%); }
+  50% { transform: translate(15%, 5%); }
+  60% { transform: translate(5%, 15%); }
+  70% { transform: translate(-5%, 10%); }
+  80% { transform: translate(10%, -5%); }
+  90% { transform: translate(-15%, 5%); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes maskReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes lineReveal {
+  from { transform: scaleX(0); transform-origin: left; }
+  to { transform: scaleX(1); transform-origin: left; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── Light Leak Effect ─────────────────────────────────── */
+.light-leak {
+  position: absolute;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.08;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+/* ─── Scroll Reveal Classes ─────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Custom cursor ─────────────────────────────────────── */
+* {
+  cursor: none;
+}
+
+@media (hover: none) {
+  * {
+    cursor: auto;
+  }
+}
