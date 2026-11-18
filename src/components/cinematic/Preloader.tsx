@@ -92,7 +92,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             className="font-display text-6xl text-ivory"
             style={{ letterSpacing: '0.1em' }}
           >
-            VB
+            VK
           </span>
         </div>
 
@@ -112,7 +112,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             className="font-display text-2xl md:text-3xl text-ivory"
             style={{ letterSpacing: '0.3em' }}
           >
-            VIJAY BHARATH
+            VIJAY KRISHNAN
           </p>
         </div>
 

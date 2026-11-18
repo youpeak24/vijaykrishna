@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { X, ChevronLeft, ChevronRight, MapPin, Calendar } from 'lucide-react';
 import { gallery, type GalleryItem } from '../data/gallery';
 
@@ -56,14 +55,6 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Visual Archive & Gallery — Vijay Bharath</title>
-        <meta
-          name="description"
-          content="Explore behind-the-scenes photography, on-set cinematography frames, film stills, and festival moments of director Vijay Bharath."
-        />
-      </Helmet>
-
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-[70vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div

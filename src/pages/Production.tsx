@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import {
   Camera,
   Edit3,
@@ -83,14 +82,6 @@ const Production: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Production Services & Capabilities — Vijay Bharath Productions</title>
-        <meta
-          name="description"
-          content="Full-suite cinematic film production services in India: Creative development, on-set direction, line production, post-production, and OTT distribution."
-        />
-      </Helmet>
-
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-[75vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div
@@ -116,7 +107,7 @@ const Production: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 border-t border-ivory/10 pt-8 items-end">
             <p className="md:col-span-8 body-text text-lg text-ivory/90 leading-relaxed">
-              VB Productions is a modern independent production banner committed to cinematic ambition, fiscal integrity, and auteur storytelling. We engineer end-to-end productions that bridge regional heart with international theatrical finish.
+              VK Productions is a modern independent production banner committed to cinematic ambition, fiscal integrity, and auteur storytelling. We engineer end-to-end productions that bridge regional heart with international theatrical finish.
             </p>
             <div className="md:col-span-4 flex md:justify-end">
               <MagneticButton href="/contact" variant="primary">
@@ -283,7 +274,7 @@ const Production: React.FC = () => {
         <div className="container-wide max-w-3xl mx-auto">
           <p className="eyebrow text-gold mb-4">Investment & Co-Production</p>
           <h2 className="font-display text-4xl sm:text-6xl text-ivory mb-6 leading-tight">
-            PARTNER WITH VB PRODUCTIONS
+            PARTNER WITH VK PRODUCTIONS
           </h2>
           <p className="body-text text-base leading-relaxed mb-10">
             We collaborate with major studios, international film funds, streaming platforms, and independent investors seeking artistically distinguished and commercially robust Indian cinema.

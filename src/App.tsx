@@ -1,6 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import Lenis from '@studio-freight/lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,6 +11,9 @@ import ScrollProgress from './components/ui/ScrollProgress';
 import FilmGrain from './components/cinematic/FilmGrain';
 import Preloader from './components/cinematic/Preloader';
 import PageTransition from './components/cinematic/PageTransition';
+import ChatAssistant from './components/chatbot/ChatAssistant';
+import { useSeo } from './seo/useSeo';
+import { shouldShowPreloader, markPreloaderShown } from './seo/preloaderPolicy';
 
 // Route-based code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -41,6 +43,7 @@ const RouteLoader = () => (
 
 function AppInner() {
   const location = useLocation();
+  useSeo(location.pathname);
 
   useEffect(() => {
     const lenis = (window as unknown as { __lenis?: { scrollTo: (target: number, opts?: { immediate?: boolean }) => void } }).__lenis;
@@ -72,19 +75,15 @@ function AppInner() {
         </Suspense>
       </PageTransition>
       <Footer />
+      <ChatAssistant />
     </>
   );
 }
 
 function App() {
-  const [loading, setLoading] = useState(() => {
-    // Only show preloader on first visit this session
-    if (typeof window !== 'undefined') {
-      const seen = sessionStorage.getItem('vb_preloader_shown');
-      if (seen) return false;
-    }
-    return true;
-  });
+  // Preloader is a first-visit flourish only: skipped for crawlers/audits and for returning
+  // visitors, so it never delays LCP for search engines or repeat users (Core Web Vitals).
+  const [loading, setLoading] = useState(shouldShowPreloader);
 
   useEffect(() => {
     // Initialize Lenis smooth scroll with natural, responsive cubic easing
@@ -119,12 +118,12 @@ function App() {
   }, []);
 
   const handlePreloaderComplete = () => {
-    sessionStorage.setItem('vb_preloader_shown', '1');
+    markPreloaderShown();
     setLoading(false);
   };
 
   return (
-    <HelmetProvider>
+    <>
       <FilmGrain />
       <CustomCursor />
       {loading && <Preloader onComplete={handlePreloaderComplete} />}
@@ -133,7 +132,7 @@ function App() {
           <AppInner />
         </BrowserRouter>
       </div>
-    </HelmetProvider>
+    </>
   );
 }
 

@@ -108,18 +108,15 @@ const HeroSection: React.FC = () => {
         </p>
 
         {/* Main name */}
-        <div className="overflow-hidden mb-4">
-          <h1 className="font-display text-[70px] sm:text-[90px] md:text-[130px] lg:text-[160px] xl:text-[200px] leading-none tracking-tight text-ivory">
-            VIJAY
-          </h1>
-        </div>
-        <div className="overflow-hidden mb-8 md:mb-12">
-          <h1 className="font-display text-[70px] sm:text-[90px] md:text-[130px] lg:text-[160px] xl:text-[200px] leading-none tracking-tight">
+        <h1 className="font-display text-[70px] sm:text-[90px] md:text-[130px] lg:text-[160px] xl:text-[200px] leading-none tracking-tight mb-8 md:mb-12">
+          <span className="block overflow-hidden mb-4 text-ivory">VIJAY</span>
+          <span className="block overflow-hidden">
             <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(245,240,232,0.4)' }}>
-              BHARATH
+              KRISHNAN
             </span>
-          </h1>
-        </div>
+          </span>
+          <span className="sr-only"> — Tamil Film Director &amp; Producer based in Chennai, India</span>
+        </h1>
 
         {/* Roles */}
         <div ref={rolesRef} className="flex flex-wrap gap-4 mb-8">
@@ -366,7 +363,7 @@ const ShowreelSection: React.FC = () => {
           <div className="relative w-full max-w-5xl bg-cinemaBlack border border-ivory/20 overflow-hidden shadow-2xl">
             <div className="flex items-center justify-between px-6 py-4 border-b border-ivory/10 bg-graphite">
               <div>
-                <p className="font-display text-lg text-ivory tracking-wide">VIJAY BHARATH — OFFICIAL SHOWREEL</p>
+                <p className="font-display text-lg text-ivory tracking-wide">VIJAY KRISHNAN — OFFICIAL SHOWREEL</p>
                 <p className="font-body text-[10px] text-silver uppercase tracking-wider">Cinematic Retrospective</p>
               </div>
               <button
@@ -418,13 +415,13 @@ const BioPreview: React.FC = () => {
               className="absolute -top-10 -left-6 font-display text-[80px] md:text-[120px] text-ivory/5 leading-none select-none"
               style={{ lineHeight: 1 }}
             >
-              VB
+              VK
             </div>
 
             <div className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden border border-ivory/10 group">
               <img
                 src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80"
-                alt="Vijay Bharath on film set"
+                alt="Vijay Krishnan on film set"
                 className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700"
                 loading="lazy"
               />
@@ -445,7 +442,7 @@ const BioPreview: React.FC = () => {
           <div>
             <p className="eyebrow mb-6 text-gold">THE FILMMAKER</p>
             <h2 className="font-display text-5xl md:text-6xl text-ivory leading-none mb-8">
-              VIJAY<br />BHARATH
+              VIJAY<br />KRISHNAN
             </h2>
             <div className="w-16 h-px bg-gold mb-8" />
             <p className="body-text text-lg leading-relaxed mb-6">

@@ -1,16 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { filmmaker } from '../data/filmmaker';
 
 const NotFound: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>404 — {filmmaker.name}</title>
-      </Helmet>
-
       <div className="min-h-screen bg-cinemaBlack flex flex-col items-center justify-center relative overflow-hidden">
         {/* Background */}
         <div

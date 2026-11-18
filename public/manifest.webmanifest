@@ -1,0 +1,20 @@
+{
+  "name": "Vijay Krishnan — Tamil Film Director & Producer",
+  "short_name": "Vijay Krishnan",
+  "description": "Official website of Vijay Krishnan, award-winning Tamil film director and producer from Chennai.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "background_color": "#08080B",
+  "theme_color": "#08080B",
+  "categories": ["entertainment", "portfolio"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/vk-favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

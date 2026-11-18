@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -58,11 +57,6 @@ const FilmDetail: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{`${film.title} (${film.year}) — Directed by ${filmmaker.name}`}</title>
-        <meta name="description" content={film.synopsis} />
-      </Helmet>
-
       {/* ─── Hero / Full-Bleed Movie Canvas ──────────────────────── */}
       <section className="relative min-h-[92vh] flex items-end overflow-hidden pt-28 pb-16">
         {/* Backdrop Image */}

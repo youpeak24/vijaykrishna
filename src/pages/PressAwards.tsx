@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Award, ExternalLink, Download, CheckCircle, FileText, ArrowRight } from 'lucide-react';
 import { awards } from '../data/awards';
 import { press } from '../data/press';
@@ -22,14 +21,6 @@ const PressAwards: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Press & Awards — Recognition, Reviews & Media Archive</title>
-        <meta
-          name="description"
-          content="Official festival laurels, national awards, and critical press features for Indian director and producer Vijay Bharath."
-        />
-      </Helmet>
-
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-[75vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div

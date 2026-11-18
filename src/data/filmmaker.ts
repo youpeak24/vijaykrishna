@@ -1,21 +1,21 @@
 export const filmmaker = {
-  name: "VIJAY BHARATH",
-  nameShort: "V. BHARATH",
-  monogram: "VB",
+  name: "VIJAY KRISHNAN",
+  nameShort: "V. KRISHNAN",
+  monogram: "VK",
   tagline: "Crafting Stories That Live Beyond the Screen.",
   philosophy: "Cinema is where imagination becomes emotion.",
-  bio: "An award-winning Indian filmmaker with a passion for stories that transcend boundaries. With over a decade of experience across feature films, short films, and commercial productions, Vijay Bharath brings a distinctive visual language and emotional depth to every frame.",
+  bio: "An award-winning Indian filmmaker with a passion for stories that transcend boundaries. With over a decade of experience across feature films, short films, and commercial productions, Vijay Krishnan brings a distinctive visual language and emotional depth to every frame.",
   bioExtended:
     "Born into a world of stories, Vijay discovered the power of cinema as a child watching the timeless classics of Indian cinema. That spark evolved into a lifelong mission: to craft films that resonate deeply, challenge perceptions, and celebrate the rich tapestry of human experience. From the streets of Tamil Nadu to international film festivals, every project is approached with the same unwavering commitment to artistic excellence and authentic storytelling.",
   roles: ["PRODUCER", "DIRECTOR", "STORYTELLER"],
   location: "Chennai, Tamil Nadu, India",
-  email: "contact@vijaybharath.com",
+  email: "contact@vijaykrishnan.in",
   phone: "+91 98400 00000",
   social: {
-    instagram: "https://instagram.com/vijaybharath",
-    youtube: "https://youtube.com/@vijaybharath",
-    imdb: "https://imdb.com/name/vijaybharath",
-    linkedin: "https://linkedin.com/in/vijaybharath",
+    instagram: "https://instagram.com/vijaykrishnan",
+    youtube: "https://youtube.com/@vijaykrishnan",
+    imdb: "https://imdb.com/name/vijaykrishnan",
+    linkedin: "https://linkedin.com/in/vijaykrishnan",
   },
   awards: [
     {

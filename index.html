@@ -1,42 +1,58 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vb-favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#08080B" />
+    <meta name="color-scheme" content="dark" />
 
-    <!-- SEO -->
-    <title>Vijay Bharath — Film Director & Producer | Chennai, India</title>
-    <meta
-      name="description"
-      content="Official portfolio of Vijay Bharath, award-winning Tamil film director and producer. Crafting stories that live beyond the screen."
-    />
-    <meta name="keywords" content="Vijay Bharath, Tamil filmmaker, Indian cinema, film director, film producer, Chennai" />
-    <meta name="author" content="Vijay Bharath" />
+    <!-- Route-specific SEO (title, description, canonical, Open Graph, Twitter, JSON-LD) is injected
+         here by vite-plugin-seo.ts from src/seo/site.ts, and kept in sync at runtime by useSeo(). -->
+    <!--seo:head-->
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://vijaybharath.com/" />
-    <meta property="og:title" content="Vijay Bharath — Film Director & Producer" />
-    <meta property="og:description" content="Crafting Stories That Live Beyond the Screen. Award-winning Indian filmmaker based in Chennai, Tamil Nadu." />
-    <meta property="og:image" content="https://vijaybharath.com/og-image.jpg" />
+    <meta name="author" content="Vijay Krishnan" />
+    <meta name="application-name" content="Vijay Krishnan" />
+    <meta name="apple-mobile-web-app-title" content="Vijay Krishnan" />
+    <meta name="keywords" content="Vijay Krishnan, Vijay Krishnan director, Tamil film director, Tamil film producer, Indian filmmaker, Chennai film director, VK Productions, Tamil cinema" />
+    <meta name="geo.region" content="IN-TN" />
+    <meta name="geo.placename" content="Chennai" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vijay Bharath — Film Director & Producer" />
-    <meta name="twitter:description" content="Crafting Stories That Live Beyond the Screen." />
+    <!-- Icons & manifest -->
+    <link rel="icon" type="image/svg+xml" href="/vk-favicon.svg" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
-    <!-- Google Fonts -->
+    <!-- Global structured data: Person + Organization + WebSite (generated from src/seo/site.ts) -->
+    <!--seo:global-->
+
+    <!-- Fonts (non-render-blocking: swap in once loaded) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
-    <div id="root"></div>
+    <!-- Semantic static content (crawlable without JavaScript) lives inside #root and is
+         replaced by React on mount. -->
+    <div id="root"><!--seo:body--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

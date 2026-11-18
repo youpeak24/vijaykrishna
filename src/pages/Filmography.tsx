@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Search, Clock, Globe, Film as FilmIcon, Sparkles } from 'lucide-react';
 import { films } from '../data/films';
@@ -46,14 +45,6 @@ const Filmography: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Filmography — The Cinematic Archive of Vijay Bharath</title>
-        <meta
-          name="description"
-          content="Explore the complete film archive of director & producer Vijay Bharath, including Nilavil Ondru, Kaadu Kuyil, Ratchagan Rises, and more."
-        />
-      </Helmet>
-
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-[70vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div

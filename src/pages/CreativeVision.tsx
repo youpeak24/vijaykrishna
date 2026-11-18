@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Sparkles, Eye, Volume2, Heart, Compass, Feather, Flame, ArrowRight } from 'lucide-react';
 import SectionHeading from '../components/ui/SectionHeading';
 import MagneticButton from '../components/ui/MagneticButton';
@@ -96,14 +95,6 @@ const CreativeVision: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Creative Vision & Filmmaking Philosophy — Vijay Bharath</title>
-        <meta
-          name="description"
-          content="The artistic manifesto, visual principles, and director's notebook of award-winning Indian filmmaker Vijay Bharath."
-        />
-      </Helmet>
-
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-[80vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div
@@ -209,7 +200,7 @@ const CreativeVision: React.FC = () => {
 
                 <div className="pt-6 border-t border-ivory/10 flex items-center justify-between">
                   <span className="font-caption italic text-silver/60 text-xs">
-                    Vijay Bharath Vision Archives
+                    Vijay Krishnan Vision Archives
                   </span>
                   <MagneticButton href="/filmography" variant="ghost" className="text-xs">
                     See This in Action <ArrowRight size={14} />

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Mail, MapPin, Phone, Send, CheckCircle, Sparkles } from 'lucide-react';
 import { filmmaker } from '../data/filmmaker';
 import { InstagramIcon, YoutubeIcon, LinkedinIcon, ImdbIcon } from '../components/ui/SocialIcons';
@@ -71,14 +70,6 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Vijay Bharath — Initiate a Cinematic Collaboration</title>
-        <meta
-          name="description"
-          content="Initiate a film production or direction conversation with Indian filmmaker Vijay Bharath. Studio located in Chennai, Tamil Nadu."
-        />
-      </Helmet>
-
       {/* ─── Hero ─────────────────────────────────────────────────── */}
       <section className="min-h-[75vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div
@@ -124,7 +115,7 @@ const Contact: React.FC = () => {
               <div>
                 <SectionHeading
                   eyebrow="Reach Us Directly"
-                  heading="VB PRODUCTIONS OFFICE"
+                  heading="VK PRODUCTIONS OFFICE"
                   accentColor="#FF304F"
                   className="mb-8"
                 />
@@ -173,7 +164,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="eyebrow text-[10px] text-silver/60 uppercase mb-1">Creative Suite</p>
-                    <p className="font-display text-xl text-ivory">VB PRODUCTIONS STUDIO</p>
+                    <p className="font-display text-xl text-ivory">VK PRODUCTIONS STUDIO</p>
                     <span className="font-body text-xs text-silver/70">
                       Alwarpet, Chennai, Tamil Nadu 600018, India
                     </span>
@@ -238,7 +229,7 @@ const Contact: React.FC = () => {
                       INQUIRY RECEIVED
                     </h3>
                     <p className="body-text text-base max-w-md mx-auto mb-8">
-                      Thank you for reaching out, <strong className="text-ivory">{formData.fullName}</strong>. Your project brief has been securely routed to Vijay Bharath’s production desk. We typically review all materials within two business days.
+                      Thank you for reaching out, <strong className="text-ivory">{formData.fullName}</strong>. Your project brief has been securely routed to Vijay Krishnan’s production desk. We typically review all materials within two business days.
                     </p>
                     <button onClick={handleReset} className="btn-secondary text-xs">
                       Submit Another Inquiry

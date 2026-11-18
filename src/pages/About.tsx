@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Compass, Film, Award, Heart, Sparkles } from 'lucide-react';
 import { filmmaker } from '../data/filmmaker';
 import SectionHeading from '../components/ui/SectionHeading';
@@ -47,16 +46,16 @@ const journeyMilestones = [
     title: 'NILAVIL ONDRU & BEST DIRECTOR',
     subtitle: 'Chennai International Film Festival Laurel',
     description:
-      'Nilavil Ondru affirmed Vijay Bharath as one of Indian cinema’s premier contemporary auteurs, sweeping festival laurels and audience devotion.',
+      'Nilavil Ondru affirmed Vijay Krishnan as one of Indian cinema’s premier contemporary auteurs, sweeping festival laurels and audience devotion.',
     icon: Award,
     accent: '#E9B96E',
   },
   {
     year: '2024-BEYOND',
-    title: 'VB PRODUCTIONS & GLOBAL HORIZONS',
+    title: 'VK PRODUCTIONS & GLOBAL HORIZONS',
     subtitle: 'Vaanam Thiranthu & International Co-productions',
     description:
-      'Stepping into international co-productions and empowering distinctive new cinematic voices through VB Productions while preparing his most ambitious feature.',
+      'Stepping into international co-productions and empowering distinctive new cinematic voices through VK Productions while preparing his most ambitious feature.',
     icon: Heart,
     accent: '#F542A7',
   },
@@ -98,14 +97,6 @@ const processSteps = [
 const About: React.FC = () => {
   return (
     <>
-      <Helmet>
-        <title>About Vijay Bharath — Visionary Indian Film Director & Producer</title>
-        <meta
-          name="description"
-          content="Learn about Vijay Bharath's cinematic journey, directing philosophy, and process in Indian cinema."
-        />
-      </Helmet>
-
       {/* ─── Hero Section ────────────────────────────────────────── */}
       <section className="min-h-[85vh] flex items-end bg-cinemaBlack relative overflow-hidden pt-28 pb-16">
         <div
@@ -153,7 +144,7 @@ const About: React.FC = () => {
               <div className="relative aspect-[3/4] overflow-hidden border border-ivory/10 group">
                 <img
                   src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80"
-                  alt="Vijay Bharath on film set"
+                  alt="Vijay Krishnan on film set"
                   className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -206,7 +197,7 @@ const About: React.FC = () => {
                 <p className="font-editorial text-lg text-ivory italic leading-relaxed">
                   "I do not view cinema as entertainment to pass time, but as an emotional mirror to preserve memory. When an audience leaves the theater, the film must continue breathing inside them."
                 </p>
-                <p className="eyebrow mt-3 text-crimson">— Vijay Bharath</p>
+                <p className="eyebrow mt-3 text-crimson">— Vijay Krishnan</p>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -351,7 +342,7 @@ const About: React.FC = () => {
           </div>
 
           <div className="mt-12">
-            <p className="font-display text-2xl text-ivory tracking-widest">VIJAY BHARATH</p>
+            <p className="font-display text-2xl text-ivory tracking-widest">VIJAY KRISHNAN</p>
             <p className="eyebrow text-xs text-silver/60 mt-1">Producer • Director • Chennai, India</p>
           </div>
         </div>
