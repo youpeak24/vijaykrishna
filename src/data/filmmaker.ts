@@ -1,3 +1,5 @@
+import { getEnv } from '../config/env';
+
 export const filmmaker = {
   name: "VIJAY KRISHNAN",
   nameShort: "V. KRISHNAN",
@@ -9,13 +11,13 @@ export const filmmaker = {
     "Born into a world of stories, Vijay discovered the power of cinema as a child watching the timeless classics of Indian cinema. That spark evolved into a lifelong mission: to craft films that resonate deeply, challenge perceptions, and celebrate the rich tapestry of human experience. From the streets of Tamil Nadu to international film festivals, every project is approached with the same unwavering commitment to artistic excellence and authentic storytelling.",
   roles: ["PRODUCER", "DIRECTOR", "STORYTELLER"],
   location: "Chennai, Tamil Nadu, India",
-  email: "contact@vijaykrishnan.in",
-  phone: "+91 98400 00000",
+  email: getEnv('VITE_CONTACT_EMAIL', 'contact@vijaykrishnan.in'),
+  phone: getEnv('VITE_CONTACT_PHONE', '+91 98400 00000'),
   social: {
-    instagram: "https://instagram.com/vijaykrishnan",
-    youtube: "https://youtube.com/@vijaykrishnan",
-    imdb: "https://imdb.com/name/vijaykrishnan",
-    linkedin: "https://linkedin.com/in/vijaykrishnan",
+    instagram: getEnv('VITE_SOCIAL_INSTAGRAM', 'https://instagram.com/vijaykrishnan'),
+    youtube: getEnv('VITE_SOCIAL_YOUTUBE', 'https://youtube.com/@vijaykrishnan'),
+    imdb: getEnv('VITE_SOCIAL_IMDB', 'https://imdb.com/name/vijaykrishnan'),
+    linkedin: getEnv('VITE_SOCIAL_LINKEDIN', 'https://linkedin.com/in/vijaykrishnan'),
   },
   awards: [
     {

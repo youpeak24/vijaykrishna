@@ -6,6 +6,7 @@
  *  - the build-time Vite plugin (pre-renders per-route HTML, sitemap.xml, 404.html).
  * Both therefore always agree.
  */
+import { getEnv } from '../config/env';
 import { films, type Film } from '../data/films';
 import { filmmaker } from '../data/filmmaker';
 import { awards } from '../data/awards';
@@ -14,7 +15,7 @@ import { gallery } from '../data/gallery';
 
 // ─── Site constants ──────────────────────────────────────────────────────────
 export const SITE = {
-  url: 'https://vijaykrishnan.in',
+  url: getEnv('VITE_SITE_URL', 'https://vijaykrishnan.in').replace(/\/+$/, ''),
   name: 'Vijay Krishnan',
   title: 'Vijay Krishnan — Tamil Film Director & Producer',
   company: 'VK Productions',
@@ -562,6 +563,12 @@ export const buildHead = (r: RouteSeo): HeadModel => {
       },
     },
   ];
+
+  // Search-console ownership tokens (optional; set in .env / Vercel env vars)
+  const google = getEnv('VITE_GOOGLE_SITE_VERIFICATION');
+  const bing = getEnv('VITE_BING_SITE_VERIFICATION');
+  if (google) tags.push({ tag: 'meta', key: 'google-site-verification', attrs: { name: 'google-site-verification', content: google } });
+  if (bing) tags.push({ tag: 'meta', key: 'msvalidate.01', attrs: { name: 'msvalidate.01', content: bing } });
 
   if (!r.noindex) {
     tags.push(

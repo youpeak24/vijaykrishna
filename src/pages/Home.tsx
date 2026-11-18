@@ -9,6 +9,8 @@ import { gallery } from '../data/gallery';
 import { awards } from '../data/awards';
 import SectionHeading from '../components/ui/SectionHeading';
 import MagneticButton from '../components/ui/MagneticButton';
+import PortraitSlider from '../components/ui/PortraitSlider';
+import { portraits } from '../data/portraits';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -408,7 +410,7 @@ const BioPreview: React.FC = () => {
     <section className="section-padding bg-cinemaBlack overflow-hidden">
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Image placeholder (portrait) */}
+          {/* Portrait slideshow */}
           <div className="relative">
             {/* Large background name */}
             <div
@@ -418,24 +420,7 @@ const BioPreview: React.FC = () => {
               VK
             </div>
 
-            <div className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden border border-ivory/10 group">
-              <img
-                src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1000&q=80"
-                alt="Vijay Krishnan on film set"
-                className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-cinemaBlack via-transparent to-transparent opacity-80" />
-              <div className="absolute inset-0 flex items-end p-6">
-                <div>
-                  <p className="eyebrow text-gold text-xs">Director on Set</p>
-                  <p className="font-caption italic text-silver text-xs">Baselight Color Suite • Chennai</p>
-                </div>
-              </div>
-              {/* Frame corners */}
-              <span className="absolute top-4 left-4 w-6 h-6 border-t border-l border-gold/60" />
-              <span className="absolute bottom-4 right-4 w-6 h-6 border-b border-r border-gold/60" />
-            </div>
+            <PortraitSlider images={portraits} caption="Director on Set" subcaption="Vijay Krishnan • Chennai" />
           </div>
 
           {/* Text */}
