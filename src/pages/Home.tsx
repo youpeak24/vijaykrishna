@@ -1,9 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Play, ArrowRight, ChevronDown, X, Volume2, VolumeX } from 'lucide-react';
-import { films } from '../data/films';
 import { filmmaker } from '../data/filmmaker';
 import { gallery } from '../data/gallery';
 import { awards } from '../data/awards';
@@ -205,105 +203,6 @@ const VisionSection: React.FC = () => {
             "{filmmaker.philosophy}"
           </p>
           <p className="eyebrow mt-4 text-gold">— {filmmaker.nameShort}</p>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ─── Featured Films Section ────────────────────────────────────────────────────
-const FeaturedFilms: React.FC = () => {
-  const featuredFilms = films.filter((f) => f.featured).slice(0, 4);
-
-  return (
-    <section className="section-padding bg-cinemaBlack overflow-hidden">
-      <div className="container-wide">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <SectionHeading
-            eyebrow="Selected Work"
-            heading="SELECTED FILMOGRAPHY"
-            accentColor="#E9B96E"
-          />
-          <MagneticButton href="/filmography" variant="ghost" className="shrink-0">
-            View All Films
-            <ArrowRight size={14} />
-          </MagneticButton>
-        </div>
-
-        {/* Asymmetric grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-6">
-          {featuredFilms.map((film, i) => {
-            const colSpan = i === 0 ? 'lg:col-span-7' : i === 1 ? 'lg:col-span-5' : i === 2 ? 'lg:col-span-5' : 'lg:col-span-7';
-            const height = i === 0 || i === 3 ? 'h-[500px] md:h-[600px]' : 'h-[400px] md:h-[500px]';
-
-            return (
-              <Link
-                key={film.id}
-                to={`/films/${film.slug}`}
-                className={`${colSpan} group relative overflow-hidden ${height} block`}
-                data-cursor="VIEW"
-              >
-                {/* Poster background image */}
-                <div className="absolute inset-0 overflow-hidden bg-cinemaBlack">
-                  <img
-                    src={film.poster}
-                    alt={film.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-cinemaBlack via-cinemaBlack/40 to-transparent" />
-
-                {/* Accent line */}
-                <div
-                  className="absolute top-0 left-0 right-0 h-0.5 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
-                  style={{ background: film.accentColor }}
-                />
-
-                {/* Content */}
-                <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between">
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <p className="eyebrow text-silver/60 mb-1">{film.language} • {film.year}</p>
-                      <div className="flex flex-wrap gap-1 mt-2">
-                        {film.genre.map((g) => (
-                          <span
-                            key={g}
-                            className="text-[10px] font-body font-semibold tracking-widest uppercase px-2 py-0.5 border"
-                            style={{ borderColor: `${film.accentColor}50`, color: film.accentColor }}
-                          >
-                            {g}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <span className="font-body text-xs text-silver/60 uppercase tracking-widest border border-silver/20 px-2 py-1">
-                      {film.role}
-                    </span>
-                  </div>
-
-                  <div>
-                    <h3
-                      className="font-display text-3xl md:text-4xl text-ivory mb-2 group-hover:text-gold transition-colors duration-300"
-                    >
-                      {film.title}
-                    </h3>
-                    <p className="font-body text-sm text-silver line-clamp-2 max-w-sm opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-400">
-                      {film.synopsis}
-                    </p>
-                    <div className="flex items-center gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="font-body text-xs font-semibold tracking-widest uppercase" style={{ color: film.accentColor }}>
-                        VIEW PROJECT
-                      </span>
-                      <ArrowRight size={12} style={{ color: film.accentColor }} />
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
         </div>
       </div>
     </section>
@@ -550,6 +449,10 @@ const BehindScenes: React.FC = () => {
                     alt={item.caption}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src =
+                        'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80';
+                    }}
                   />
                 </div>
                 <div className="absolute inset-0 bg-cinemaBlack/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -734,7 +637,6 @@ const Home: React.FC = () => {
     <main>
       <HeroSection />
       <VisionSection />
-      <FeaturedFilms />
       <ShowreelSection />
       <BioPreview />
       <ExpertiseSection />

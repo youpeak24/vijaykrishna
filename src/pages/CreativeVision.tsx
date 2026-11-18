@@ -35,7 +35,7 @@ const visionPillars: VisionPillar[] = [
       'Audiences do not remember plot intricacies six months after leaving a dark cinema hall; they remember the temperature of a tear, the suffocating tension of an unanswered question, or the sudden euphoria of a shared gaze.',
     notebookNote:
       '"Every scene must possess an emotional pivot — a moment where the internal power shifts irreparably."',
-    image: 'https://images.unsplash.com/photo-1518134346374-184f9d21eb29?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&q=80',
     accent: '#FF304F',
     icon: Heart,
   },
@@ -71,7 +71,7 @@ const visionPillars: VisionPillar[] = [
       'Silence is cinema’s most courageous instrument. In Indian cinema, sound has often been deployed as non-stop assault. We treat the acoustic space as sacred: the rustle of dry leaves in Madurai, a distant train whistle, the heavy pause before heartbreak.',
     notebookNote:
       '"Mix for the breath. If the audience cannot hear the character inhale, the frame is emotionally dead."',
-    image: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=1200&q=80',
     accent: '#3478F6',
     icon: Volume2,
   },

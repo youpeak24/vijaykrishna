@@ -48,7 +48,7 @@ export const films: Film[] = [
       'Set against the nocturnal poetry of Madurai’s heritage streets, Nilavil Ondru charts the delicate collision of two divergent worlds. An archivist chronicling vanishing temple murals crosses paths with a free-spirited Carnatic fusion vocalist. Amidst ancient courtyards and contemporary estrangements, their shared silence becomes a language of healing, challenging societal orthodoxy through an evocative tapestry of emotion and light.',
     directorNote:
       'This film was born from a twilight conversation in Madurai about how tradition and desire negotiate space in modern hearts. I wanted the camera to breathe like a silent confidant — allowing long, contemplative takes where the light speaks before the characters do. Cinema at its core is the capture of unspoken longing.',
-    poster: 'https://images.unsplash.com/photo-1518134346374-184f9d21eb29?auto=format&fit=crop&w=800&q=80',
+    poster: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=800&q=80',
     backdrop: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=1600&q=80',
     trailerUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4',
     stills: [
@@ -98,13 +98,13 @@ export const films: Film[] = [
     directorNote:
       'We spent three weeks inhabiting the Nilgiris before rolling a single frame. The soundscape of mist, dripping leaves, and unseen predators had to dictate our film rhythm. We shot largely in natural twilight and anamorphic lenses to render the wilderness not as a backdrop, but as an ancient, sentient witness.',
     poster: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80',
-    backdrop: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1600&q=80',
+    backdrop: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1600&q=80',
     trailerUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     stills: [
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=1000&q=80',
     ],
     cast: [
       { actor: 'Kishore', character: 'Rajan (Forest Ranger)' },
@@ -153,7 +153,7 @@ export const films: Film[] = [
       'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1518134346374-184f9d21eb29?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1000&q=80',
     ],
     cast: [
       { actor: 'Suriya (Special Appearance)', character: 'Mentor IAS' },
@@ -196,11 +196,11 @@ export const films: Film[] = [
     directorNote:
       'Mazhai was filmed with a minimalist crew of eight individuals on natural daylight and reflectors. With virtually zero artificial embellishments, we learned that emotional amplitude expands when cinematic distraction is eliminated.',
     poster: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
-    backdrop: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1600&q=80',
+    backdrop: 'https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?auto=format&fit=crop&w=1600&q=80',
     trailerUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
     stills: [
       'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?auto=format&fit=crop&w=1000&q=80',
       'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80',
     ],
     cast: [

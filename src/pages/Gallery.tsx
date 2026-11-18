@@ -141,6 +141,10 @@ const Gallery: React.FC = () => {
                     alt={item.caption}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src =
+                        'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80';
+                    }}
                   />
 
                   {/* Gradient overlay */}

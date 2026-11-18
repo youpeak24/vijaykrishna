@@ -22,7 +22,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     id: 'g2',
-    src: 'https://images.unsplash.com/photo-1511497584788-87676104235f?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?auto=format&fit=crop&w=1200&q=80',
     category: 'on-set',
     caption: 'Setting the 35mm anamorphic rig in dense Nilgiri fog',
     project: 'Kaadu Kuyil',
@@ -102,7 +102,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     id: 'g10',
-    src: 'https://images.unsplash.com/photo-1508873696983-2df5293cb32b?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?auto=format&fit=crop&w=1200&q=80',
     category: 'film-stills',
     caption: 'Monsoon clouds gathering over the Western Ghats horizon',
     project: 'Kaadu Kuyil',
@@ -112,7 +112,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     id: 'g11',
-    src: 'https://images.unsplash.com/photo-1518134346374-184f9d21eb29?auto=format&fit=crop&w=1200&q=80',
+    src: 'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80',
     category: 'events',
     caption: 'Acceptance speech for Best Director at Chennai International Film Festival',
     project: 'CIFF Gala Night',
