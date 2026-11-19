@@ -49,13 +49,27 @@ const Navbar: React.FC = () => {
       >
         <div className="container-wide">
           <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Monogram */}
+            {/* Brand Logo */}
             <Link
               to="/"
-              className="font-display text-2xl text-ivory hover:text-gold transition-colors duration-300 tracking-widest"
+              className="flex items-center gap-3 group"
               data-cursor="HOME"
             >
-              {filmmaker.monogram}
+              <div className="relative w-9 h-9 md:w-11 md:h-11 rounded-full overflow-hidden border border-gold/40 group-hover:border-gold transition-all duration-300 shadow-[0_0_12px_rgba(233,185,110,0.25)] shrink-0">
+                <img
+                  src="/logo/apple-touch-icon.png"
+                  alt={filmmaker.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display text-lg md:text-xl text-ivory group-hover:text-gold transition-colors duration-300 tracking-wider leading-none">
+                  VIJAY KRISHNAN
+                </span>
+                <span className="font-caption text-[9px] md:text-[10px] text-silver/70 tracking-[0.22em] uppercase leading-tight mt-0.5">
+                  FILMMAKER
+                </span>
+              </div>
             </Link>
 
             {/* Desktop nav links */}

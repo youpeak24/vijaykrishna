@@ -93,9 +93,18 @@ const Production: React.FC = () => {
         />
 
         <div className="container-wide relative z-10 w-full">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-px bg-gold" />
-            <p className="eyebrow text-gold">Production Excellence</p>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-full overflow-hidden border border-gold/50 shadow-[0_0_15px_rgba(233,185,110,0.3)] bg-graphite shrink-0">
+              <img
+                src="/logo/apple-touch-icon.png"
+                alt="VK Productions"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-6 h-px bg-gold" />
+              <p className="eyebrow text-gold">VK Productions • Production Excellence</p>
+            </div>
           </div>
 
           <h1 className="font-display text-[64px] sm:text-[90px] md:text-[130px] lg:text-[160px] leading-[0.88] text-ivory tracking-tight mb-8">
@@ -272,6 +281,15 @@ const Production: React.FC = () => {
       {/* ─── Production House Collaboration CTA ──────────────────── */}
       <section className="section-padding bg-cinemaBlack text-center relative overflow-hidden">
         <div className="container-wide max-w-3xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-gold/50 shadow-[0_0_35px_rgba(233,185,110,0.3)] bg-graphite/40">
+              <img
+                src="/logo/android-chrome-512x512.png"
+                alt="VK Productions Banner Logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <p className="eyebrow text-gold mb-4">Investment & Co-Production</p>
           <h2 className="font-display text-4xl sm:text-6xl text-ivory mb-6 leading-tight">
             PARTNER WITH VK PRODUCTIONS

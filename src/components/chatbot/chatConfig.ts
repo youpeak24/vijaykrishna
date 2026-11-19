@@ -20,9 +20,9 @@ export const chatConfig: ChatConfig = {
   apiPath: '/api/chat',
   name: 'VK ASSISTANT',
   subtitle: 'Online · Ask about films & production',
-  avatar: '/vk-favicon.svg',
+  avatar: '/logo/apple-touch-icon.png',
   greeting:
-    'Welcome 🎬 I’m the **Vijay Krishnan** website assistant.\n\nAsk me about his films, awards, VK Productions, or how to get in touch for a collaboration.',
+    'Welcome 🎬 I’m the **S Vijay Krishnan** website assistant.\n\nAsk me about his films, awards, VK Productions, or how to get in touch for a collaboration.',
   teaser: 'Curious about a film or a collaboration? Ask me 🎬',
   placeholder: 'Ask about films, awards, production…',
   disclaimer: 'AI assistant · answers may be imperfect. For project details, please contact the team.',

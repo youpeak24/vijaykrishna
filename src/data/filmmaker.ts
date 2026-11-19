@@ -1,14 +1,16 @@
 import { getEnv } from '../config/env';
 
 export const filmmaker = {
-  name: "VIJAY KRISHNAN",
-  nameShort: "V. KRISHNAN",
+  name: "S VIJAY KRISHNAN",
+  nameShort: "S VIJAY KRISHNAN",
   monogram: "VK",
+  logo: "/logo/apple-touch-icon.png",
+  logoHighRes: "/logo/android-chrome-512x512.png",
   tagline: "Crafting Stories That Live Beyond the Screen.",
   philosophy: "Cinema is where imagination becomes emotion.",
-  bio: "An award-winning Indian filmmaker with a passion for stories that transcend boundaries. With over a decade of experience across feature films, short films, and commercial productions, Vijay Krishnan brings a distinctive visual language and emotional depth to every frame.",
+  bio: "An award-winning Indian filmmaker with a passion for stories that transcend boundaries. With over a decade of experience across feature films, short films, and commercial productions, S Vijay Krishnan brings a distinctive visual language and emotional depth to every frame.",
   bioExtended:
-    "Born into a world of stories, Vijay discovered the power of cinema as a child watching the timeless classics of Indian cinema. That spark evolved into a lifelong mission: to craft films that resonate deeply, challenge perceptions, and celebrate the rich tapestry of human experience. From the streets of Tamil Nadu to international film festivals, every project is approached with the same unwavering commitment to artistic excellence and authentic storytelling.",
+    "Born into a world of stories, S Vijay Krishnan discovered the power of cinema as a child watching the timeless classics of Indian cinema. That spark evolved into a lifelong mission: to craft films that resonate deeply, challenge perceptions, and celebrate the rich tapestry of human experience. From the streets of Tamil Nadu to international film festivals, every project is approached with the same unwavering commitment to artistic excellence and authentic storytelling.",
   roles: ["PRODUCER", "DIRECTOR", "STORYTELLER"],
   location: "Chennai, Tamil Nadu, India",
   email: getEnv('VITE_CONTACT_EMAIL', 'contact@vijaykrishnan.in'),

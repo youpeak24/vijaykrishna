@@ -28,7 +28,7 @@ const journeyMilestones = [
     title: 'MAZHAI & CRITICAL ACCLAIM',
     subtitle: 'BIFFES Winner & National Recognition',
     description:
-      'Shot on location in Ramanathapuram with a crew of twelve. Mazhai captured the prestigious BIFFES Award and proved Vijay’s signature poetics of space and silence.',
+      'Shot on location in Ramanathapuram with a crew of twelve. Mazhai captured the prestigious BIFFES Award and proved S Vijay Krishnan’s signature poetics of space and silence.',
     icon: Award,
     accent: '#3478F6',
   },
@@ -46,7 +46,7 @@ const journeyMilestones = [
     title: 'NILAVIL ONDRU & BEST DIRECTOR',
     subtitle: 'Chennai International Film Festival Laurel',
     description:
-      'Nilavil Ondru affirmed Vijay Krishnan as one of Indian cinema’s premier contemporary auteurs, sweeping festival laurels and audience devotion.',
+      'Nilavil Ondru affirmed S Vijay Krishnan as one of Indian cinema’s premier contemporary auteurs, sweeping festival laurels and audience devotion.',
     icon: Award,
     accent: '#E9B96E',
   },
@@ -109,8 +109,17 @@ const About: React.FC = () => {
 
         <div className="container-wide relative z-10 w-full">
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-px bg-gold" />
-            <p className="eyebrow text-gold">The Mind Behind The Frame</p>
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-gold/40 shadow-[0_0_12px_rgba(233,185,110,0.2)] shrink-0">
+              <img
+                src="/logo/apple-touch-icon.png"
+                alt="Vijay Krishnan"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-6 h-px bg-gold" />
+              <p className="eyebrow text-gold">The Mind Behind The Frame</p>
+            </div>
           </div>
 
           <h1 className="font-display text-[64px] sm:text-[90px] md:text-[130px] lg:text-[160px] leading-[0.88] text-ivory tracking-tight mb-8">
@@ -144,7 +153,7 @@ const About: React.FC = () => {
               <div className="relative aspect-[3/4] overflow-hidden border border-ivory/10 group">
                 <img
                   src="https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80"
-                  alt="Vijay Krishnan on film set"
+                  alt="S Vijay Krishnan on film set"
                   className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
@@ -190,14 +199,14 @@ const About: React.FC = () => {
               </p>
 
               <p className="body-text leading-relaxed mb-8">
-                Operating from Chennai, the historic heartbeat of South Indian cinema, Vijay's cinema exists at the intersection of classical dramatic restraint and kinetic modern sensory experience. Whether working on an intimate rural canvas or a sprawling political thriller, his frames are marked by architectural symmetry, nuanced cultural specificity, and deep empathy for human fragility.
+                Operating from Chennai, the historic heartbeat of South Indian cinema, S Vijay Krishnan's cinema exists at the intersection of classical dramatic restraint and kinetic modern sensory experience. Whether working on an intimate rural canvas or a sprawling political thriller, his frames are marked by architectural symmetry, nuanced cultural specificity, and deep empathy for human fragility.
               </p>
 
               <div className="p-6 bg-cinemaBlack/60 border-l-2 border-crimson mb-10">
                 <p className="font-editorial text-lg text-ivory italic leading-relaxed">
                   "I do not view cinema as entertainment to pass time, but as an emotional mirror to preserve memory. When an audience leaves the theater, the film must continue breathing inside them."
                 </p>
-                <p className="eyebrow mt-3 text-crimson">— Vijay Krishnan</p>
+                <p className="eyebrow mt-3 text-crimson">— S Vijay Krishnan</p>
               </div>
 
               <div className="flex flex-wrap gap-4">
@@ -341,8 +350,15 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="mt-12">
-            <p className="font-display text-2xl text-ivory tracking-widest">VIJAY KRISHNAN</p>
+          <div className="mt-12 flex flex-col items-center">
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gold/50 shadow-[0_0_30px_rgba(233,185,110,0.3)] mb-4 bg-cinemaBlack">
+              <img
+                src="/logo/android-chrome-192x192.png"
+                alt="S Vijay Krishnan Emblem"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="font-display text-2xl text-ivory tracking-widest">S VIJAY KRISHNAN</p>
             <p className="eyebrow text-xs text-silver/60 mt-1">Producer • Director • Chennai, India</p>
           </div>
         </div>

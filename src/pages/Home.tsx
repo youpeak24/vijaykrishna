@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
 
         {/* Main name */}
         <h1 className="font-display text-[70px] sm:text-[90px] md:text-[130px] lg:text-[160px] xl:text-[200px] leading-none tracking-tight mb-8 md:mb-12">
-          <span className="block overflow-hidden mb-4 text-ivory">VIJAY</span>
+          <span className="block overflow-hidden mb-4 text-ivory">S VIJAY</span>
           <span className="block overflow-hidden">
             <span className="text-transparent" style={{ WebkitTextStroke: '1px rgba(245,240,232,0.4)' }}>
               KRISHNAN
@@ -264,7 +264,7 @@ const ShowreelSection: React.FC = () => {
           <div className="relative w-full max-w-5xl bg-cinemaBlack border border-ivory/20 overflow-hidden shadow-2xl">
             <div className="flex items-center justify-between px-6 py-4 border-b border-ivory/10 bg-graphite">
               <div>
-                <p className="font-display text-lg text-ivory tracking-wide">VIJAY KRISHNAN — OFFICIAL SHOWREEL</p>
+                <p className="font-display text-lg text-ivory tracking-wide">S VIJAY KRISHNAN — OFFICIAL SHOWREEL</p>
                 <p className="font-body text-[10px] text-silver uppercase tracking-wider">Cinematic Retrospective</p>
               </div>
               <button
@@ -319,14 +319,23 @@ const BioPreview: React.FC = () => {
               VK
             </div>
 
-            <PortraitSlider images={portraits} caption="Director on Set" subcaption="Vijay Krishnan • Chennai" />
+            <PortraitSlider images={portraits} caption="Director on Set" subcaption="S Vijay Krishnan • Chennai" />
           </div>
 
           {/* Text */}
           <div>
-            <p className="eyebrow mb-6 text-gold">THE FILMMAKER</p>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-11 h-11 rounded-full overflow-hidden border border-gold/50 shadow-[0_0_15px_rgba(233,185,110,0.25)] bg-cinemaBlack shrink-0">
+                <img
+                  src="/logo/apple-touch-icon.png"
+                  alt="Vijay Krishnan"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="eyebrow text-gold">THE FILMMAKER • AUTEUR CINEMA</p>
+            </div>
             <h2 className="font-display text-5xl md:text-6xl text-ivory leading-none mb-8">
-              VIJAY<br />KRISHNAN
+              S VIJAY<br />KRISHNAN
             </h2>
             <div className="w-16 h-px bg-gold mb-8" />
             <p className="body-text text-lg leading-relaxed mb-6">
@@ -611,6 +620,15 @@ const CTASection: React.FC = () => {
       />
 
       <div className="container-wide relative z-10 text-center">
+        <div className="flex justify-center mb-6">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-2 border-gold/50 shadow-[0_0_35px_rgba(233,185,110,0.3)] bg-cinemaBlack">
+            <img
+              src="/logo/android-chrome-192x192.png"
+              alt="Vijay Krishnan Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
         <p className="eyebrow mb-6 text-silver">OPEN FOR COLLABORATION</p>
         <h2 className="font-display text-5xl md:text-7xl lg:text-9xl text-ivory leading-none mb-8">
           LET'S CREATE<br />

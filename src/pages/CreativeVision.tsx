@@ -107,8 +107,17 @@ const CreativeVision: React.FC = () => {
 
         <div className="container-wide relative z-10 w-full">
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-px bg-violet" />
-            <p className="eyebrow text-violet">The Director’s Notebook</p>
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-violet/50 shadow-[0_0_12px_rgba(139,92,246,0.25)] shrink-0">
+              <img
+                src="/logo/apple-touch-icon.png"
+                alt="Vijay Krishnan"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-6 h-px bg-violet" />
+              <p className="eyebrow text-violet">The Director’s Notebook</p>
+            </div>
           </div>
 
           <h1 className="font-display text-[64px] sm:text-[90px] md:text-[130px] lg:text-[160px] leading-[0.88] text-ivory tracking-tight mb-8">
@@ -200,7 +209,7 @@ const CreativeVision: React.FC = () => {
 
                 <div className="pt-6 border-t border-ivory/10 flex items-center justify-between">
                   <span className="font-caption italic text-silver/60 text-xs">
-                    Vijay Krishnan Vision Archives
+                    S Vijay Krishnan Vision Archives
                   </span>
                   <MagneticButton href="/filmography" variant="ghost" className="text-xs">
                     See This in Action <ArrowRight size={14} />

@@ -16,8 +16,8 @@ import { gallery } from '../data/gallery';
 // ─── Site constants ──────────────────────────────────────────────────────────
 export const SITE = {
   url: getEnv('VITE_SITE_URL', 'https://vijaykrishnan.in').replace(/\/+$/, ''),
-  name: 'Vijay Krishnan',
-  title: 'Vijay Krishnan — Tamil Film Director & Producer',
+  name: 'S Vijay Krishnan',
+  title: 'S Vijay Krishnan — Tamil Film Director & Producer',
   company: 'VK Productions',
   lang: 'en-IN',
   locale: 'en_IN',
@@ -25,7 +25,7 @@ export const SITE = {
   ogImage: '/og-image.jpg',
   ogImageWidth: 1200,
   ogImageHeight: 630,
-  ogImageAlt: 'Vijay Krishnan — Tamil film director and producer, Chennai',
+  ogImageAlt: 'S Vijay Krishnan — Tamil film director and producer, Chennai',
   /**
    * Bump when site content meaningfully changes. Used as <lastmod> in sitemap.xml.
    * (Google ignores lastmod when it is always "today", so keep this honest.)
@@ -212,10 +212,10 @@ const filmographyItemList = {
 export const ROUTES: RouteSeo[] = [
   {
     path: '/',
-    title: 'Vijay Krishnan — Tamil Film Director & Producer | Chennai',
+    title: 'S Vijay Krishnan — Tamil Film Director & Producer | Chennai',
     description:
-      'Official website of Vijay Krishnan, award-winning Tamil film director and producer from Chennai. Explore his films, awards, gallery and VK Productions.',
-    heading: 'Vijay Krishnan — Tamil Film Director & Producer',
+      'Official website of S Vijay Krishnan, award-winning Tamil film director and producer from Chennai. Explore his films, awards, gallery and VK Productions.',
+    heading: 'S Vijay Krishnan — Tamil Film Director & Producer',
     ogType: 'website',
     image: SITE.ogImage,
     imageAlt: SITE.ogImageAlt,
@@ -227,7 +227,7 @@ export const ROUTES: RouteSeo[] = [
         '@type': 'WebPage',
         '@id': `${abs('/')}#webpage`,
         url: abs('/'),
-        name: 'Vijay Krishnan — Tamil Film Director & Producer',
+        name: 'S Vijay Krishnan — Tamil Film Director & Producer',
         isPartOf: { '@id': ID.website },
         about: ownerRef,
         primaryImageOfPage: { '@type': 'ImageObject', url: abs(SITE.ogImage) },
@@ -250,10 +250,10 @@ export const ROUTES: RouteSeo[] = [
   },
   {
     path: '/about',
-    title: 'About Vijay Krishnan — Indian Film Director & Producer',
+    title: 'About S Vijay Krishnan — Indian Film Director & Producer',
     description:
-      'Meet Vijay Krishnan: Chennai-based Tamil film director and producer with 12+ years in Indian cinema. His journey, directing philosophy and creative process.',
-    heading: 'About Vijay Krishnan',
+      'Meet S Vijay Krishnan: Chennai-based Tamil film director and producer with 12+ years in Indian cinema. His journey, directing philosophy and creative process.',
+    heading: 'About S Vijay Krishnan',
     ogType: 'profile',
     image: SITE.ogImage,
     imageAlt: SITE.ogImageAlt,
@@ -265,7 +265,7 @@ export const ROUTES: RouteSeo[] = [
         '@type': 'ProfilePage',
         '@id': `${abs('/about')}#webpage`,
         url: abs('/about'),
-        name: 'About Vijay Krishnan',
+        name: 'About S Vijay Krishnan',
         isPartOf: { '@id': ID.website },
         mainEntity: ownerRef,
         dateModified: SITE.lastModified,
@@ -284,10 +284,10 @@ export const ROUTES: RouteSeo[] = [
   },
   {
     path: '/filmography',
-    title: 'Filmography — Films by Vijay Krishnan | Tamil Cinema',
+    title: 'Filmography — Films by S Vijay Krishnan | Tamil Cinema',
     description:
-      'Complete filmography of Vijay Krishnan: Nilavil Ondru, Kaadu Kuyil, Ratchagan Rises, Mazhai, Vaanam Thiranthu and Nila Kavithai. Tamil features and shorts.',
-    heading: 'Filmography of Vijay Krishnan',
+      'Complete filmography of S Vijay Krishnan: Nilavil Ondru, Kaadu Kuyil, Ratchagan Rises, Mazhai, Vaanam Thiranthu and Nila Kavithai. Tamil features and shorts.',
+    heading: 'Filmography of S Vijay Krishnan',
     ogType: 'website',
     image: SITE.ogImage,
     imageAlt: SITE.ogImageAlt,
@@ -299,7 +299,7 @@ export const ROUTES: RouteSeo[] = [
         '@type': 'CollectionPage',
         '@id': `${abs('/filmography')}#webpage`,
         url: abs('/filmography'),
-        name: 'Filmography — Films by Vijay Krishnan',
+        name: 'Filmography — Films by S Vijay Krishnan',
         isPartOf: { '@id': ID.website },
         about: ownerRef,
         mainEntity: filmographyItemList,
@@ -307,7 +307,7 @@ export const ROUTES: RouteSeo[] = [
       },
     ],
     body: {
-      paragraphs: ['Feature films and short films directed and produced by Vijay Krishnan.'],
+      paragraphs: ['Feature films and short films directed and produced by S Vijay Krishnan.'],
       list: [
         {
           title: 'Films',
@@ -323,7 +323,7 @@ export const ROUTES: RouteSeo[] = [
     path: '/production',
     title: 'Film Production Services — VK Productions, Chennai',
     description:
-      'VK Productions, the independent banner of Vijay Krishnan: creative development, line production, post-production and OTT distribution for Indian cinema.',
+      'VK Productions, the independent banner of S Vijay Krishnan: creative development, line production, post-production and OTT distribution for Indian cinema.',
     heading: 'VK Productions — Film Production Services',
     ogType: 'website',
     image: SITE.ogImage,
@@ -344,16 +344,16 @@ export const ROUTES: RouteSeo[] = [
     ],
     body: {
       paragraphs: [
-        'VK Productions is a modern independent production banner committed to cinematic ambition, fiscal integrity and auteur storytelling, founded by Vijay Krishnan in Chennai.',
+        'VK Productions is a modern independent production banner committed to cinematic ambition, fiscal integrity and auteur storytelling, founded by S Vijay Krishnan in Chennai.',
         'Services: creative development, on-set direction, line production, post-production and OTT distribution for Indian and international films.',
       ],
     },
   },
   {
     path: '/creative-vision',
-    title: 'Creative Vision & Filmmaking Philosophy | Vijay Krishnan',
+    title: 'Creative Vision & Filmmaking Philosophy | S Vijay Krishnan',
     description:
-      "The artistic manifesto, visual principles and director's notebook of Tamil filmmaker Vijay Krishnan: how light, sound and silence shape his cinema.",
+      "The artistic manifesto, visual principles and director's notebook of Tamil filmmaker S Vijay Krishnan: how light, sound and silence shape his cinema.",
     heading: 'Creative Vision & Filmmaking Philosophy',
     ogType: 'website',
     image: SITE.ogImage,
@@ -372,13 +372,13 @@ export const ROUTES: RouteSeo[] = [
         inLanguage: SITE.lang,
       },
     ],
-    body: { paragraphs: [filmmaker.philosophy, "The artistic manifesto, visual principles and director's notebook of Vijay Krishnan."] },
+    body: { paragraphs: [filmmaker.philosophy, "The artistic manifesto, visual principles and director's notebook of S Vijay Krishnan."] },
   },
   {
     path: '/gallery',
-    title: 'Gallery — On-Set Photos & Film Stills | Vijay Krishnan',
+    title: 'Gallery — On-Set Photos & Film Stills | S Vijay Krishnan',
     description:
-      'Behind-the-scenes photography, on-set frames, film stills and festival moments from the films of Tamil director Vijay Krishnan.',
+      'Behind-the-scenes photography, on-set frames, film stills and festival moments from the films of Tamil director S Vijay Krishnan.',
     heading: 'Visual Archive & Gallery',
     ogType: 'website',
     image: SITE.ogImage,
@@ -391,7 +391,7 @@ export const ROUTES: RouteSeo[] = [
         '@type': 'ImageGallery',
         '@id': `${abs('/gallery')}#webpage`,
         url: abs('/gallery'),
-        name: 'Visual Archive & Gallery — Vijay Krishnan',
+        name: 'Visual Archive & Gallery — S Vijay Krishnan',
         isPartOf: { '@id': ID.website },
         about: ownerRef,
         inLanguage: SITE.lang,
@@ -404,9 +404,9 @@ export const ROUTES: RouteSeo[] = [
   },
   {
     path: '/press-awards',
-    title: 'Press & Awards — Festival Laurels | Vijay Krishnan',
+    title: 'Press & Awards — Festival Laurels | S Vijay Krishnan',
     description:
-      'Festival laurels, jury awards and press coverage for Tamil director Vijay Krishnan, including Best Director at Chennai International Film Festival.',
+      'Festival laurels, jury awards and press coverage for Tamil director S Vijay Krishnan, including Best Director at Chennai International Film Festival.',
     heading: 'Press & Awards',
     ogType: 'website',
     image: SITE.ogImage,
@@ -419,14 +419,14 @@ export const ROUTES: RouteSeo[] = [
         '@type': 'CollectionPage',
         '@id': `${abs('/press-awards')}#webpage`,
         url: abs('/press-awards'),
-        name: 'Press & Awards — Vijay Krishnan',
+        name: 'Press & Awards — S Vijay Krishnan',
         isPartOf: { '@id': ID.website },
         about: ownerRef,
         inLanguage: SITE.lang,
       },
     ],
     body: {
-      paragraphs: ['Official festival laurels, awards and critical press for director and producer Vijay Krishnan.'],
+      paragraphs: ['Official festival laurels, awards and critical press for director and producer S Vijay Krishnan.'],
       list: [
         { title: 'Awards', items: awards.map((a) => ({ text: `${a.title} — ${a.festival} (${a.year}), ${a.project}${a.type === 'nomination' ? ' [nomination]' : ''}` })) },
         { title: 'Press', items: press.map((p) => ({ text: p.headline })) },
@@ -435,10 +435,10 @@ export const ROUTES: RouteSeo[] = [
   },
   {
     path: '/contact',
-    title: 'Contact Vijay Krishnan — Film Direction & Production',
+    title: 'Contact S Vijay Krishnan — Film Direction & Production',
     description:
-      'Contact Vijay Krishnan and VK Productions in Chennai, Tamil Nadu for film direction, production partnerships, press and collaboration enquiries.',
-    heading: 'Contact Vijay Krishnan',
+      'Contact S Vijay Krishnan and VK Productions in Chennai, Tamil Nadu for film direction, production partnerships, press and collaboration enquiries.',
+    heading: 'Contact S Vijay Krishnan',
     ogType: 'website',
     image: SITE.ogImage,
     imageAlt: SITE.ogImageAlt,
@@ -450,7 +450,7 @@ export const ROUTES: RouteSeo[] = [
         '@type': 'ContactPage',
         '@id': `${abs('/contact')}#webpage`,
         url: abs('/contact'),
-        name: 'Contact Vijay Krishnan',
+        name: 'Contact S Vijay Krishnan',
         isPartOf: { '@id': ID.website },
         about: ownerRef,
         inLanguage: SITE.lang,
@@ -466,8 +466,8 @@ export const ROUTES: RouteSeo[] = [
 /** Served with HTTP 404 by the host; must never be indexed. */
 export const NOT_FOUND_ROUTE: RouteSeo = {
   path: '/404',
-  title: 'Page Not Found | Vijay Krishnan',
-  description: 'The page you are looking for does not exist. Return to the official website of Tamil film director Vijay Krishnan.',
+  title: 'Page Not Found | S Vijay Krishnan',
+  description: 'The page you are looking for does not exist. Return to the official website of Tamil film director S Vijay Krishnan.',
   heading: 'Page Not Found',
   ogType: 'website',
   image: SITE.ogImage,
@@ -525,8 +525,8 @@ export const globalGraph = (): Record<string, unknown> => ({
       '@id': ID.website,
       url: abs('/'),
       name: SITE.name,
-      alternateName: ['Vijay Krishnan Films', 'vijaykrishnan.in'],
-      description: 'Official website of Vijay Krishnan, Tamil film director and producer.',
+      alternateName: ['S Vijay Krishnan Films', 'Vijay Krishnan Films', 'vijaykrishnan.in'],
+      description: 'Official website of S Vijay Krishnan, Tamil film director and producer.',
       inLanguage: SITE.lang,
       publisher: ownerRef,
     },
@@ -609,7 +609,7 @@ export const buildHead = (r: RouteSeo): HeadModel => {
 
   if (r.ogType === 'profile') {
     tags.push(
-      { tag: 'meta', key: 'profile:first_name', attrs: { property: 'profile:first_name', content: 'Vijay' } },
+      { tag: 'meta', key: 'profile:first_name', attrs: { property: 'profile:first_name', content: 'S Vijay' } },
       { tag: 'meta', key: 'profile:last_name', attrs: { property: 'profile:last_name', content: 'Krishnan' } },
     );
   }

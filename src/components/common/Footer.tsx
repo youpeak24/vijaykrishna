@@ -44,8 +44,24 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <span className="font-display text-3xl text-ivory tracking-widest">{filmmaker.monogram}</span>
-            <p className="font-caption italic text-silver mt-3 text-sm leading-relaxed">
+            <Link to="/" className="inline-flex items-center gap-3.5 mb-4 group">
+              <div className="w-14 h-14 rounded-full overflow-hidden border border-gold/40 group-hover:border-gold transition-all duration-300 shadow-[0_0_20px_rgba(233,185,110,0.25)] shrink-0">
+                <img
+                  src="/logo/apple-touch-icon.png"
+                  alt={filmmaker.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display text-2xl text-ivory group-hover:text-gold transition-colors duration-300 tracking-wider leading-none">
+                  VIJAY KRISHNAN
+                </span>
+                <span className="font-caption text-[10px] text-silver/70 tracking-[0.25em] uppercase leading-tight mt-1">
+                  FILM DIRECTOR &amp; PRODUCER
+                </span>
+              </div>
+            </Link>
+            <p className="font-caption italic text-silver mt-2 text-sm leading-relaxed">
               "{filmmaker.philosophy}"
             </p>
             <div className="flex gap-3 mt-6">

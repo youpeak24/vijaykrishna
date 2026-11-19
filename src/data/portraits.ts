@@ -14,6 +14,6 @@ export const portraits: Portrait[] = Array.from({ length: COUNT }, (_, i) => {
     src: `/images/vijay/vijay-${num}.png`,
     pngSrc: `/images/vijay/vijay-${num}.png`,
     jpgSrc: `/images/vijay/vijay-${num}.jpg`,
-    alt: `Vijay Krishnan, Tamil film director and producer, on set — photo ${i + 1} of ${COUNT}`,
+    alt: `S Vijay Krishnan, Tamil film director and producer, on set — photo ${i + 1} of ${COUNT}`,
   };
 });

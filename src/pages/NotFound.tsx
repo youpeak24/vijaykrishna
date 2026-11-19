@@ -27,6 +27,16 @@ const NotFound: React.FC = () => {
             <span className="absolute bottom-0 right-0 w-6 h-6 border-b border-r border-ivory/20" />
           </div>
 
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 rounded-full overflow-hidden border border-crimson/50 shadow-[0_0_20px_rgba(255,48,79,0.3)] bg-graphite shrink-0">
+              <img
+                src="/logo/apple-touch-icon.png"
+                alt="Vijay Krishnan"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
           <p className="eyebrow mb-6 text-crimson">Scene Not Found</p>
           <h1 className="font-display text-[80px] md:text-[120px] text-ivory leading-none mb-6">
             CUT.<br />SCENE MISSING.

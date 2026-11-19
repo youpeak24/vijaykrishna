@@ -86,14 +86,15 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
       />
 
       <div className="relative z-10 flex flex-col items-center gap-6">
-        {/* Monogram */}
+        {/* Brand Logo */}
         <div ref={monogramRef} className="opacity-0">
-          <span
-            className="font-display text-6xl text-ivory"
-            style={{ letterSpacing: '0.1em' }}
-          >
-            VK
-          </span>
+          <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-gold/60 shadow-[0_0_50px_rgba(233,185,110,0.35)] bg-cinemaBlack">
+            <img
+              src="/logo/android-chrome-512x512.png"
+              alt="Vijay Krishnan Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Gold line */}
@@ -112,7 +113,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             className="font-display text-2xl md:text-3xl text-ivory"
             style={{ letterSpacing: '0.3em' }}
           >
-            VIJAY KRISHNAN
+            S VIJAY KRISHNAN
           </p>
         </div>
 

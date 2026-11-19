@@ -52,8 +52,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             }}
           />
 
-          {/* Close button */}
-          <div className="relative z-10 container-wide flex justify-end py-6">
+          {/* Top header with Logo & Close button */}
+          <div className="relative z-10 container-wide flex items-center justify-between py-6 border-b border-ivory/10">
+            <Link
+              to="/"
+              onClick={onClose}
+              className="flex items-center gap-3 group"
+            >
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-gold/40 shadow-[0_0_12px_rgba(233,185,110,0.25)] shrink-0">
+                <img
+                  src="/logo/apple-touch-icon.png"
+                  alt={filmmaker.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="font-display text-lg text-ivory tracking-wider leading-none">
+                  VIJAY KRISHNAN
+                </span>
+                <span className="font-caption text-[9px] text-silver/70 tracking-[0.22em] uppercase leading-tight mt-0.5">
+                  FILMMAKER
+                </span>
+              </div>
+            </Link>
+
             <button
               onClick={onClose}
               className="p-2 text-silver hover:text-ivory transition-colors duration-300"

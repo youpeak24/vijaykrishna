@@ -33,8 +33,17 @@ const PressAwards: React.FC = () => {
 
         <div className="container-wide relative z-10 w-full">
           <div className="flex items-center gap-3 mb-6">
-            <span className="w-8 h-px bg-gold" />
-            <p className="eyebrow text-gold">Honors & Critical Reception</p>
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-gold/50 shadow-[0_0_12px_rgba(233,185,110,0.25)] shrink-0">
+              <img
+                src="/logo/apple-touch-icon.png"
+                alt="Vijay Krishnan"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-6 h-px bg-gold" />
+              <p className="eyebrow text-gold">Honors & Critical Reception</p>
+            </div>
           </div>
 
           <h1 className="font-display text-[64px] sm:text-[90px] md:text-[130px] lg:text-[160px] leading-[0.88] text-ivory tracking-tight mb-8">

@@ -1,0 +1,12 @@
+{
+  "name": "S Vijay Krishnan — Tamil Film Director & Producer",
+  "short_name": "S Vijay Krishnan",
+  "description": "Official website of S Vijay Krishnan, award-winning Tamil film director and producer from Chennai.",
+  "icons": [
+    { "src": "/logo/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logo/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#08080B",
+  "background_color": "#08080B",
+  "display": "standalone"
+}

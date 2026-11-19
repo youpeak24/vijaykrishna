@@ -87,7 +87,7 @@ const PortraitSlider: React.FC<PortraitSliderProps> = ({
       className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden border border-ivory/10 bg-charcoal select-none"
       role="region"
       aria-roledescription="carousel"
-      aria-label="Photos of Vijay Krishnan on set"
+      aria-label="Photos of S Vijay Krishnan on set"
       tabIndex={0}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
