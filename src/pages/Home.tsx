@@ -8,6 +8,7 @@ import { awards } from '../data/awards';
 import SectionHeading from '../components/ui/SectionHeading';
 import MagneticButton from '../components/ui/MagneticButton';
 import PortraitSlider from '../components/ui/PortraitSlider';
+import CareerTimeline from '../components/sections/CareerTimeline';
 import { portraits } from '../data/portraits';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -657,6 +658,7 @@ const Home: React.FC = () => {
       <VisionSection />
       <ShowreelSection />
       <BioPreview />
+      <CareerTimeline />
       <ExpertiseSection />
       <BehindScenes />
       <RecognitionSection />

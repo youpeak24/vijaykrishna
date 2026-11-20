@@ -222,3 +222,52 @@
     cursor: auto;
   }
 }
+
+/* ─── Career Timeline ───────────────────────────────────── */
+@keyframes tlKenBurns {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+
+@keyframes tlProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@keyframes tlSweep {
+  0% { transform: translateX(-120%) skewX(-18deg); }
+  60%, 100% { transform: translateX(320%) skewX(-18deg); }
+}
+
+.tl-kenburns {
+  animation: tlKenBurns 9s cubic-bezier(0.2, 0.6, 0.2, 1) forwards;
+}
+
+.tl-progress {
+  transform-origin: left;
+  animation-name: tlProgress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.tl-sweep {
+  animation: tlSweep 3.2s ease-in-out infinite;
+}
+
+.tl-shimmer-text {
+  background-size: 220% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tl-kenburns,
+  .tl-sweep,
+  .tl-shimmer-text {
+    animation: none;
+  }
+
+  .tl-progress {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
